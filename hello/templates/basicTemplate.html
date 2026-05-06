@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+
+    <style>
+
+        nav {
+            background-color: lightblue;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #555;
+        }
+
+        nav a:hover {
+            background-color: aqua;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            margin-right: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <center>
+        <h1
+            style="
+            background-color: blue;
+            color: yellow;
+            padding: 15px;
+            "
+        >
+            STUDENT COURSE REGISTRATION PORTAL
+        </h1>
+    </center>
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="/courses/">
+                    COURSE LIST
+                </a>
+            </li>
+
+            <li>
+                <a href="/courses/generateCSV/">
+                    CSV DOWNLOAD
+                </a>
+            </li>
+
+            <li>
+                <a href="/courses/generatePDF/">
+                    PDF DOWNLOAD
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <section>
+
+        {% block content %}
+        {% endblock %}
+
+    </section>
+
+    <footer>
+
+        <hr>
+
+        <center>
+            © Developed using Django
+        </center>
+
+    </footer>
+
+</body>
+</html>
